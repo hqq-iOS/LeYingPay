@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "heqinqin" => "546551235@qq.com" }
    s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :commit => "#{s.version}" }
+  s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :tag => "1.0.0" }
   s.requires_arc = true
 
 s.subspec 'Core' do |core|
