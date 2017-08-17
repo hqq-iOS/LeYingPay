@@ -23,9 +23,11 @@ Pod::Spec.new do |s|
    s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :tag => "1.0.0" }
   s.requires_arc = true
+  s.default_subspecs = "Core", "AliPay", "WXPay", "UnionPay"
 
 s.subspec 'Core' do |core|
     core.source_files = 'LYPaySDK/Core/**/*.{h,m}'
+    s.public_header_files = 'LYPaySDK/Core/LYPaySDKHeader.h'
     core.requires_arc = true
     core.ios.library = 'c++', 'stdc++', 'z'
     core.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security'
@@ -58,10 +60,10 @@ s.subspec 'AliPay' do |alipay|
     unionpay.dependency 'LYPaySDK/Core'
   end
 
- s.subspec 'ApplePay' do |apple|
+ s.subspec 'ApplyPay' do |apple|
     apple.frameworks = 'QuartzCore','PassKit'
-    apple.vendored_libraries = 'LYPaySDK/Channel/ApplePay/libs/libUPAPayPlugin.a'
-    apple.source_files = 'LYPaySDK/Channel/ApplePay/**/*.{h,m}'
+    apple.vendored_libraries = 'LYPaySDK/Channel/ApplyPay/libs/libUPAPayPlugin.a'
+    apple.source_files = 'LYPaySDK/Channel/ApplyPay/**/*.{h,m}'
     apple.dependency 'LYPaySDK/Core'
   end
 
