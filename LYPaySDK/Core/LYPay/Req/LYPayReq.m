@@ -10,7 +10,6 @@
 #import "LYPayAdapter.h"
 #import "NSString+Tool.h"
 #import "PayEncryptionConfig.h"
-#import "RSADataSigner.h"
 #import "AlipayOrder.h"
 #import "getIPhoneIP.h"
 #import "XMLDictionary.h"
@@ -252,12 +251,13 @@
     NSLog(@"orderSpec = %@",orderInfo);
     
     NSString *signedString = nil;
-    RSADataSigner* signer = [[RSADataSigner alloc] initWithPrivateKey:((rsa2PrivateKey.length > 1)?rsa2PrivateKey:rsaPrivateKey)];
-    if ((rsa2PrivateKey.length > 1)) {
-        signedString = [signer signString:orderInfo withRSA2:YES];
-    } else {
-        signedString = [signer signString:orderInfo withRSA2:NO];
-    }
+#warning ----- 此处是RSA2加密，本地加密需要导入openssl，请参考支付宝demo
+//    RSADataSigner* signer = [[RSADataSigner alloc] initWithPrivateKey:((rsa2PrivateKey.length > 1)?rsa2PrivateKey:rsaPrivateKey)];
+//    if ((rsa2PrivateKey.length > 1)) {
+//        signedString = [signer signString:orderInfo withRSA2:YES];
+//    } else {
+//        signedString = [signer signString:orderInfo withRSA2:NO];
+//    }
     
     if (signedString != nil) {
         //应用注册scheme,在AliSDKDemo-Info.plist定义URL types

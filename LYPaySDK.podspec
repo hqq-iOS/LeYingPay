@@ -29,6 +29,7 @@ s.subspec 'Core' do |core|
       core.dependency "AFNetworking", "~> 3.1.0"
     core.source_files = 'LYPaySDK/Core/**/*.{h,m}'
     core.public_header_files = 'LYPaySDK/Core/LYPaySDKHeader.h'
+    core.public_header_files = 'LYPaySDK/Core/LYPay/Req/openssl/*.h'
     core.requires_arc = true
     core.ios.library = 'c++', 'stdc++', 'z'
     core.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security'
