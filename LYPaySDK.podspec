@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "LYPaySDK"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "聚合SDK demo  "
 
   s.description  = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "heqinqin" => "546551235@qq.com" }
    s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :tag => "1.0.1" }
   s.requires_arc = true
   s.default_subspecs = "Core", "AliPay", "WXPay", "UnionPay"
 
@@ -40,7 +40,8 @@ s.subspec 'Core' do |core|
 s.subspec 'AliPay' do |alipay|
     alipay.frameworks = 'CoreMotion' , 'CoreTelephony'
     alipay.vendored_frameworks = 'LYPaySDK/Channel/AliPay/AlipaySDK.framework'
-   alipay.source_files = 'LYPaySDK/Channel/AliPay/**/*.{h,m}'
+    alipay.source_files = 'LYPaySDK/Channel/AliPay/**/*.{h,m}'
+    alipay.resources    = "LYPaySDK/Channel/AliPay/AlipaySDK.bundle"
     alipay.dependency 'LYPaySDK/Core'
   end
 
@@ -69,12 +70,12 @@ s.subspec 'AliPay' do |alipay|
   end
 
   s.subspec 'JDPay' do |jd|
-      jd.frameworks = 'QuartzCore','PassKit'
+    jd.frameworks = 'QuartzCore','PassKit'
     jd.vendored_libraries = 'LYPaySDK/Channel/JDPay/libJDPay.a'
-     jd.source_files = 'LYPaySDK/Channel/JDPay/**/*.{h,m}'
+    jd.source_files = 'LYPaySDK/Channel/JDPay/**/*.{h,m}'
     jd.dependency 'LYPaySDK/Core'
+    jd.resources    = "LYPaySDK/Channel/JDPay/JDPAuthResource.bundle"
   end
-
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
  
