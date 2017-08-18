@@ -1039,6 +1039,7 @@
 				CODE_SIGN_ENTITLEMENTS = LeYingPay/LeYingPay.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Ding (9MV3KG22PM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peng Ding (9MV3KG22PM)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = H5D4C54FWL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
