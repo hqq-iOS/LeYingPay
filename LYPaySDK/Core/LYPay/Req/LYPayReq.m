@@ -6,7 +6,6 @@
 //  Copyright © 2017年 hhly. All rights reserved.
 //
 
-#import "LYPayReq.h"
 #import "LYPayAdapter.h"
 #import "NSString+Tool.h"
 #import "PayEncryptionConfig.h"
@@ -209,7 +208,6 @@
     // 获取 rsa2PrivateKey，建议使用支付宝提供的公私钥生成工具生成，
     // 工具地址：https://doc.open.alipay.com/docs/doc.htm?treeId=291&articleId=106097&docType=1
     NSString *rsa2PrivateKey = @"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCUKtgozTt9NpQfeKFn/Bj7LIxuJiIcY47Xz4PagCbC6p+SsabqEoCEwDMTnImWivenV0/kKI2XELu3hC/v4fQ0tybWxsoVlyGoDElekiZuVh6BVTSxrvoxHp2Uo+wQGBPFte4F8fHPvByz2piRcScvWI57fjnd7dQfFeMEGTMu1fxWtEcKuFkMq7hMimD/wPRjtFEjmsOa3kDtYJwARx/b4eGKlOab779Iq/nfP78aPGvtjRX+kJ0/GAJ7e4YYfem4fZ8dhCr5HjXS3LprRHNceEMGNT2g8jwGhgghWqcJzj0NuHoluPCv0gd3rT3furR/+IXbT72CApmCTt1lN7wDAgMBAAECggEATqGeLakdFQpN+ZWvMtwa9dFihWI/YAmF2QoL032HFJInNVaKWlaPVeQaNyIv8nC1lV1EzLSoz67VsEK6nfev/fnk5r6AqIyYE/LRTRsKwit57PEnEdTmegLhZezIbpIYjChMtWL9DV2rbddoeGcwgHPiya7nTtvUYtreq2IkQ4oFs5FMvF+3hG0d7+mryXjOlZVGtZ0fDAMTFrYxBylouYqmakSLGmeL42MOg22/O/EYYongeL3+tRQM9ABDQ7FmJtARoG3QxfJLPJuIpNpL6BJQz4EukeIA//S9qdVpljsFW4OESxjRDIhU7Zfi4LDyr3DHdHoxCOucuswfRAtdgQKBgQDEN0As993jKTd7lqykwWsMbNWpr7AO0rGiIuA74o/PFi2ad+LppIZMhgOonoY3wgbk7Pih7q1RgHYNa1cJS+EVy42DX1dpykTMgsktRoakpy67C2cwZl+bKoGo2v1J8UTXvA61In7GiqRhzIzuER4wj1GsdHiWPBIJ0jvGzLmtEwKBgQDBT9WcudEZQyL1kgmx21EqXk0efu3woS1c6mhLLDaQyZDUXAOXhC9fEkbomNBbMsGU30smSTGWNfiXOvjUggfWMOdU0+C52oic/fEQt8ibboz6DguhJ0Ej+wlOeU54XKlX9oh4zAPQMHlVEir+7NIEN4XpWaNiBFZy2Jw3AqRDUQKBgEr+MvD86zlfD22U8PcnVZqyHhd0pn2D2ZB2c+1vcjdb6qIXIArcbtfggJV5wSKebbQhPgXmCygTSQtn8yQCdEy4N6X2UpqETDc95VYAloVnwFyMxyugdPoBDP1UdWpFZGJv5c8lF/8aDimy3EpBEKDOphCbk1sYKmzGhUI+DNkxAoGAX9lk0iv0OLFoMRjzA6P6D6boWBmZgvl3051KjxNiDtJSpGjnQwZAssQOMqAqlz2IbHd2/InIM3GZS+rqm/vJRPPEj/Pqdlyb5jOnhqGJrz/WWNoD/CjJjLyZNbbCKL3RHZNYwYRu05hlYL/8X6Au1fZtyHEwqJX8Az/R3RjLN7ECgYEAormcccmzhZVc/jR/VrvQ0GrEJZ7Aqn3m/Q8vhIpbGsIfeBjvXheSVTh99f9t7J+HFRQHadK56TIhnQfAs/kNbR23VBymG8WcFoJ7YBPEpo8f3/sBYgjCuM/hkFCOIXLBj+KOHgGPVUw6p1pEGRvTPmDh/E+g/6yyXotlsUSy0uM=";
-    NSString *rsaPrivateKey = @"";
     
     /*
      *生成订单信息及签名

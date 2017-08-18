@@ -8,9 +8,7 @@
 
 #import "WXPayAdapter.h"
 #import "WXApi.h"
-#import "WXPayAdapter.h"
 #import "LYPayConstant.h"
-#import "LYPayResp.h"
 #import "NSString+Tool.h"
 #import "LYPayHandle.h"
 

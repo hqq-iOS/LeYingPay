@@ -994,6 +994,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Ding (9MV3KG22PM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peng Ding (9MV3KG22PM)";
 				DEVELOPMENT_TEAM = H5D4C54FWL;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LYPaySDK/Channel/AliPay",
@@ -1039,6 +1040,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Ding (9MV3KG22PM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Peng Ding (9MV3KG22PM)";
 				DEVELOPMENT_TEAM = H5D4C54FWL;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LYPaySDK/Channel/AliPay",

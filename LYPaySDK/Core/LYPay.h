@@ -52,7 +52,6 @@
 /**
  * 设置代理，接收回调消息
  *
- * @param delegate
  */
 + (void)setLYPayDelegate:(id<LYPayDelegate>)delegate;
 

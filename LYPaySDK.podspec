@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/hqq-iOS/LeYingPay"
   s.license      = "MIT"
   s.author             = { "heqinqin" => "546551235@qq.com" }
-   s.platform     = :ios, "7.0"
+   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/hqq-iOS/LeYingPay.git", :tag => "1.0.0" }
   s.requires_arc = true
   s.default_subspecs = "Core", "AliPay", "WXPay", "UnionPay"
