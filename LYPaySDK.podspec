@@ -28,12 +28,12 @@ Pod::Spec.new do |s|
 s.subspec 'Core' do |core|
       core.dependency "AFNetworking", "~> 3.1.0"
     core.source_files = 'LYPaySDK/Core/**/*.{h,m}'
-    core.public_header_files = 'LYPaySDK/Core/**/*.h'
+    core.public_header_files = 'LYPaySDK/Core/LYPaySDKHeader.h'
     core.requires_arc = true
     core.ios.library = 'c++', 'stdc++', 'z'
     core.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security'
-    alipay.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libcrypto.a'
-    alipay.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libssl.a'
+    core.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libcrypto.a'
+    core.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libssl.a'
     core.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
 

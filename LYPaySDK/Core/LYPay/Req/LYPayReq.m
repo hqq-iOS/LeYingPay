@@ -16,6 +16,7 @@
 #import "XMLDictionary.h"
 #import "LYPayResp.h"
 #import "LYPayHandle.h"
+#import "AFNetworking.h"
 
 //微信支付商户号
 #define MCH_ID  @"1331975601"

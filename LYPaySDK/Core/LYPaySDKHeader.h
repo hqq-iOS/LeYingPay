@@ -13,6 +13,6 @@
 #import "LYPayResp.h"
 #import "LYPayReq.h"
 #import "LYPayUseAdapterProtocol.h"
-#import "AFNetworking.h"
+
 
 #endif /* LYPaySDKHeader_h */
