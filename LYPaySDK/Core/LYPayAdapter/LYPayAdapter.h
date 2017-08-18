@@ -22,7 +22,7 @@
 + (BOOL)LYPayForSendWeChatPay:(NSMutableDictionary *)params;
 
 //是否支持打开API
-+ (BOOL)LYPayIsWeChatAppSupportAp;
++ (BOOL)LYPayIsWeChatAppSupportApi;
 
 #pragma  mark -- 支付宝alipay
 //发起支付宝支付

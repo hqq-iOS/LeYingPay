@@ -26,19 +26,20 @@ Pod::Spec.new do |s|
   s.default_subspecs = "Core", "AliPay", "WXPay", "UnionPay"
 
 s.subspec 'Core' do |core|
+      core.dependency "AFNetworking", "~> 3.1.0"
     core.source_files = 'LYPaySDK/Core/**/*.{h,m}'
-    s.public_header_files = 'LYPaySDK/Core/LYPaySDKHeader.h'
+    core.public_header_files = 'LYPaySDK/Core/**/*.h'
     core.requires_arc = true
     core.ios.library = 'c++', 'stdc++', 'z'
     core.frameworks = 'CFNetwork', 'SystemConfiguration', 'Security'
+    alipay.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libcrypto.a'
+    alipay.vendored_libraries = 'LYPaySDK/Core/LYPay/Req/libssl.a'
     core.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
 
 s.subspec 'AliPay' do |alipay|
     alipay.frameworks = 'CoreMotion' , 'CoreTelephony'
     alipay.vendored_frameworks = 'LYPaySDK/Channel/AliPay/AlipaySDK.framework'
-    alipay.vendored_libraries = 'LYPaySDK/Channel/AliPay/libcrypto.a'
-    alipay.vendored_libraries = 'LYPaySDK/Channel/AliPay/libssl.a'
    alipay.source_files = 'LYPaySDK/Channel/AliPay/**/*.{h,m}'
     alipay.dependency 'LYPaySDK/Core'
   end
@@ -76,8 +77,6 @@ s.subspec 'AliPay' do |alipay|
 
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "AFNetworking", "~> 3.1.0"
-  s.dependency "SDWebImage", "~> 4.1.0"
-  s.dependency "Reachability", "~> 3.2"
+ 
 
 end
